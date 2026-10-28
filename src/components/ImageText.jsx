@@ -1,7 +1,10 @@
 import React from "react";
 import { imageTextData, imageTextData2 } from "../data/imageText";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ImageText = () => {
+  AOS.init();
   return (
     <section id="imageText" className="section">
       <h1 className="blind">이미지 텍스트 유형</h1>
@@ -20,7 +23,12 @@ const ImageText = () => {
         </div>
 
         {imageTextData.map((text, index) => (
-          <div className={`imageText_img img${text.id}`} key={index}>
+          <div
+            className={`imageText_img img${text.id}`}
+            key={index}
+            data-aos="zoom-in"
+            data-aos-delay={index * 500}
+          >
             <img src={text.img} alt="" />
             <a href="/">{text.text}</a>
           </div>
