@@ -12,7 +12,12 @@
 }
 .header_logo {
   font-size: 36px;
+  font-weight: bold;
   text-transform: uppercase;
+}
+.header_logo a {
+  color: rgb(68, 36, 0);
+  text-shadow: 1px 1px 3px rgba(68, 36, 0, 0.5);
 }
 .header_logo em {
   font-size: 20px;
